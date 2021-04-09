@@ -1,15 +1,13 @@
 # word-to-pdf
 
 ```
+use o comando para instalar todas as dependências.
 npm install
 ```
-use the command to install all the dependencies
-
-```
-node app.js
+use o comando para iniciar o aplicativo.
+yarn dev
 ```
 
-use the command to start the application
-
-you will find the page on 
+```
+você encontrará a página em
 >localhost:3000
