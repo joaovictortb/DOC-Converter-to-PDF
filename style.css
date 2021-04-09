@@ -1,0 +1,23 @@
+*,
+html {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #04df79 no-repeat;
+  overflow: hidden;
+}
+
+.container .header {
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 0.1em 0.1em 0.05em #fff;
+}
