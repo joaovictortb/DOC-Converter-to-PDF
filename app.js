@@ -38,9 +38,9 @@ app.post('/upload',function(req,res){
         var initialPath = path.join(__dirname, `./uploads/${First_name}${extend_docx}`);
         // Caminho onde o pdf convertido será colocado / carregado
         var upload_path = path.join(__dirname, `./uploads/${First_name}${extend_pdf}`);
-        //Converter to convert docx to pdf -->docx-pdf is used
-        //If you want you can use any other converter
-        //For example -- libreoffice-convert or --awesome-unoconv
+        // Conversor para converter docx para pdf -> docx-pdf é usado
+        // Se você quiser, pode usar qualquer outro conversor
+        // Por exemplo - libreoffice-convert ou --awesome-unoconv
         docxConverter(initialPath,upload_path,function(err,result){
         if(err){
           console.log(err);
@@ -57,12 +57,12 @@ app.post('/upload',function(req,res){
 });
 
 app.get('/download', (req,res) =>{
-  //This will be used to download the converted file
+  // Isso será usado para baixar o arquivo convertido
   res.download(__dirname +`/uploads/${down_name}${extend_pdf}`,`${down_name}${extend_pdf}`,(err) =>{
     if(err){
       res.send(err);
     }else{
-      //Delete the files from directory after the use
+      // Exclua os arquivos do diretório após o uso
       console.log('Files deleted');
       const delete_path_doc = process.cwd() + `/uploads/${down_name}${extend_docx}`;
       const delete_path_pdf = process.cwd() + `/uploads/${down_name}${extend_pdf}`;
